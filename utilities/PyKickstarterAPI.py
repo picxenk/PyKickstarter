@@ -34,3 +34,5 @@ class PyKickstarterAPI(object):
         new_url = ( url_parts.scheme, url_parts.netloc, url_parts.path, query_str, url_parts.fragment )
         return urlunsplit(new_url)
         
+    def encode_get_params(self, key_pairs):
+        return urlencode(key_pairs)
